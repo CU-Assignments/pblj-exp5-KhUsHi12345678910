@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class AutoboxingUnboxingSum {
+    public static List<Integer> parseStringToIntegerList(String[] numbers) {
+    List<Integer> integerList = new ArrayList<>();
+    for (String num : numbers) {
+    integerList.add(Integer.parseInt(num)); 
+    }
+    return integerList;
+    }
+ 
+    public static int calculateSum(List<Integer> numbers) {
+    int sum = 0;
+    for (Integer num : numbers) {
+    sum += num; 
+    }
+    return sum;
+    }
+    
+    public static void main(String[] args) {
+    String[] numberStrings = {"10", "20", "30", "40", "50"};
+    List<Integer> integerList = parseStringToIntegerList(numberStrings);
+    int sum = calculateSum(integerList);
+    System.out.println("The sum of the integers is: " + sum);
+    }
+}
